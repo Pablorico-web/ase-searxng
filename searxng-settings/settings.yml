@@ -1,0 +1,70 @@
+# A.S.E — SearXNG Configuration (JSON API enabled)
+
+use_default_settings: true
+
+general:
+  instance_name: "A.S.E Perception"
+  debug: false
+
+search:
+  safe_search: 0
+  autocomplete: ""
+  default_lang: "en"
+  formats:
+    - html
+    - json
+
+server:
+  port: 8080
+  bind_address: "0.0.0.0"
+  secret_key: "ase-autonomous-sovereign-economic-system"
+  image_proxy: false
+  limiter: false
+  public_instance: false
+
+ui:
+  static_use_hash: true
+  default_theme: simple
+
+outgoing:
+  request_timeout: 5
+  max_request_timeout: 10
+  useragent_suffix: ""
+  pool_connections: 100
+  pool_maxsize: 20
+
+engines:
+  - name: google
+    engine: google
+    shortcut: go
+    disabled: false
+
+  - name: bing
+    engine: bing
+    shortcut: bi
+    disabled: false
+
+  - name: duckduckgo
+    engine: duckduckgo
+    shortcut: ddg
+    disabled: false
+
+  - name: wikipedia
+    engine: wikipedia
+    shortcut: wp
+    disabled: false
+
+  - name: github
+    engine: github
+    shortcut: gh
+    disabled: false
+
+  - name: stackoverflow
+    engine: stackoverflow
+    shortcut: so
+    disabled: false
+
+  - name: arxiv
+    engine: arxiv
+    shortcut: ar
+    disabled: false
